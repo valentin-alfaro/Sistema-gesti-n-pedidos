@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\NewFolder\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>

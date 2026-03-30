@@ -17,5 +17,6 @@ namespace Sistema_gestion_pedidos.Models
         [ForeignKey("Producto")]
         public int ProductoId { get; set; }
         public Producto Producto { get; set; } = null!;
+        public decimal PrecioUnitario{ get; set; }
     }
 }

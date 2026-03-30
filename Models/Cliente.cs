@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Sistema_gestion_pedidos.Models
 {
@@ -13,6 +14,7 @@ namespace Sistema_gestion_pedidos.Models
         public string Email { get; set; } = string.Empty;//Para evitar el error de valor nulo
 
         //Relaciones
+        [JsonIgnore]
         public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
     }
 }

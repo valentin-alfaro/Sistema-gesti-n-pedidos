@@ -1,7 +1,11 @@
-﻿namespace Sistema_gestion_pedidos.Dto
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sistema_gestion_pedidos.Dto
 {
     public class ClienteDto
     {
+        //Pequeña validación para el DNI, que solo permita números y tenga una longitud de 8 caracteres
+        [RegularExpression(@"^\d+$", ErrorMessage = "El DNI solo puede contener números.")]
         public string DNI { get; set; } = string.Empty;
         public string Nombre { get; set; } = string.Empty;
         public string Apellido { get; set; } = string.Empty;

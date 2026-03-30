@@ -15,5 +15,6 @@ namespace Sistema_gestion_pedidos.Models
         public int IdCliente { get; set; }
         public Cliente Cliente { get; set; } = null!;
         public List<DetallePedido> DetallesPedido { get; set; } = new List<DetallePedido>();
+        public decimal TotalPedido { get; set; }
     }
 }

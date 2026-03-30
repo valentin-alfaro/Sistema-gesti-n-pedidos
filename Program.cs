@@ -1,5 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
+using Sistema_gestion_pedidos.Service;
 
 namespace Sistema_gestion_pedidos
 {
@@ -20,7 +21,7 @@ namespace Sistema_gestion_pedidos
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<Data.AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            builder.Services.AddScoped<IPedidoService, PedidoService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
