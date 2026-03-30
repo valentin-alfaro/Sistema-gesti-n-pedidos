@@ -14,6 +14,6 @@ namespace Sistema_gestion_pedidos.Models
         [ForeignKey("Cliente")]
         public int IdCliente { get; set; }
         public Cliente Cliente { get; set; } = null!;
-        public List<DetallePedido> DetallePedido { get; set; } = new List<DetallePedido>();
+        public List<DetallePedido> DetallesPedido { get; set; } = new List<DetallePedido>();
     }
 }
